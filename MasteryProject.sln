@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasteryProject", "MasteryProject\MasteryProject.csproj", "{6572C92D-B580-4C05-AF08-FD4E57B47227}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasteryProject.Tests", "MasteryProject.Tests\MasteryProject.Tests.csproj", "{B56C3CDD-AE72-437D-A679-71EE2A34584B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6572C92D-B580-4C05-AF08-FD4E57B47227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6572C92D-B580-4C05-AF08-FD4E57B47227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6572C92D-B580-4C05-AF08-FD4E57B47227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6572C92D-B580-4C05-AF08-FD4E57B47227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B56C3CDD-AE72-437D-A679-71EE2A34584B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B56C3CDD-AE72-437D-A679-71EE2A34584B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B56C3CDD-AE72-437D-A679-71EE2A34584B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B56C3CDD-AE72-437D-A679-71EE2A34584B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {121DC164-B8D8-403F-A6D8-59E570EDC703}
+	EndGlobalSection
+EndGlobal
