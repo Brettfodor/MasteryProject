@@ -3,12 +3,27 @@ using Xunit;
 
 namespace MasteryProject.Tests
 {
-    public class UnitTest1
+    public class EmployeeTests
     {
+        Employee employee;
+        public EmployeeTests()
+        {
+            employee = new Employee();
+        }
+
+
+
         [Fact]
-        public void Test1()
+        public void Can_Pay_Salary()
         {
 
+            //arrange
+            employee.Paid = false;
+            //act
+            employee.PaySalary();
+            
+            //assert
+            Assert.True(employee.Paid);
         }
     }
 }

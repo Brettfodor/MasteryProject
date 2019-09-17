@@ -5,9 +5,12 @@ using Xunit;
 
 namespace MasteryProject.Tests
 {
-    [Fact]
-    public void Test1()
+    public class PatientTests
     {
+        [Fact]
+        public void Test1()
+        {
 
+        }
     }
 }

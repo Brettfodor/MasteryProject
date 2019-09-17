@@ -4,7 +4,26 @@ using System.Text;
 
 namespace MasteryProject
 {
-    class Employee
+    public class Employee
     {
+        public string Name { get; set; }
+        public int EmployeeNumber { get; set; }
+        public int Salary { get; set; }
+        public bool Paid { get; set; }
+
+        public void PaySalary()
+        {
+            if (!Paid)
+            {
+                Console.WriteLine($"You Have Paid {Name} {Salary}.");
+                Paid = true;
+            }
+            else
+            { Console.WriteLine($"{Name} has already been paid."); }
+        }
+    
+
+    
+        
     }
 }
