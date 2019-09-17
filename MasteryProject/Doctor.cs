@@ -9,13 +9,18 @@ namespace MasteryProject
         public string Specialty { get; set; }
 
 
-        public Doctor(string name, int number, string specialty)
+        public Doctor(string name, int employeeNumber, string specialty)
         {
             Name = name;
-            EmployeeNumber = number;
+            EmployeeNumber = employeeNumber;
             Salary = 90000;
             Paid = false;
             Specialty = specialty;
+        }
+
+        public void CareForPatient()
+        {
+
         }
     }
 }
