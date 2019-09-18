@@ -19,7 +19,11 @@ namespace MasteryProject
         {
 
         }
+        public override void CheckInfo()
+        {
+            Console.WriteLine($"Employee {EmployeeNumber} {Name} has {NumberofPatients} patients");
+        }
 
-        
+
     }
 }

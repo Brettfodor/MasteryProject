@@ -15,6 +15,16 @@ namespace MasteryProject
             OnPhone = false;
         }
 
-        
+        public override void CheckInfo()
+        {
+            if (OnPhone == true)
+            {
+                Console.WriteLine($"Employee {EmployeeNumber}, {Name} is not on the phone");
+            }
+            else
+            {
+                Console.WriteLine($"Employee {EmployeeNumber}, {Name} is on the phone");
+            }
+        }
     }
 }

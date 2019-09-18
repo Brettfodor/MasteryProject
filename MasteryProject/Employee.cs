@@ -29,6 +29,10 @@ namespace MasteryProject
             else
             { Console.WriteLine($"{Name} has already been paid."); }
         }
+        public virtual void CheckInfo()
+        {
+            
+        }
         
 
     

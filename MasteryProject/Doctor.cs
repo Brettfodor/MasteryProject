@@ -21,6 +21,11 @@ namespace MasteryProject
 
         }
 
-        
+        public override void CheckInfo()
+        {
+            Console.WriteLine($"Employee {EmployeeNumber} {Name} is a {Specialty}");
+        }
+
+
     }
 }
