@@ -8,7 +8,7 @@ namespace MasteryProject.Tests
         Employee employee;
         public EmployeeTests()
         {
-            employee = new Employee();
+            employee = new Employee("Don", "0005");
         }
 
 

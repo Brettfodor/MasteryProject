@@ -8,13 +8,13 @@ namespace MasteryProject
     {
         public bool OnPhone { get; set; }
 
-        public Receptionist(string name, int employeeNumber, bool onPhone)
+        public Receptionist(string name, string employeeNumber, bool onPhone) : base(name, employeeNumber)
         {
-            Name = name;
-            EmployeeNumber = employeeNumber;
+            
             Salary = 45000;
-            Paid = false;
             OnPhone = false;
         }
+
+        
     }
 }

@@ -8,12 +8,10 @@ namespace MasteryProject
     {
         public int NumberofPatients { get; set; }
 
-        public Nurse(string name, int employeeNumber, int numberOfPatients)
+        public Nurse(string name, string employeeNumber, int numberOfPatients): base(name, employeeNumber)
         {
-            Name = name;
-            EmployeeNumber = employeeNumber;
+            
             Salary = 50000;
-            Paid = false;
             NumberofPatients = numberOfPatients;
         }
 
@@ -21,5 +19,7 @@ namespace MasteryProject
         {
 
         }
+
+        
     }
 }

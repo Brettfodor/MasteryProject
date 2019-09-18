@@ -9,12 +9,10 @@ namespace MasteryProject
         public string Specialty { get; set; }
 
 
-        public Doctor(string name, int employeeNumber, string specialty)
+        public Doctor(string name, string employeeNumber, string specialty) : base(name, employeeNumber)
         {
-            Name = name;
-            EmployeeNumber = employeeNumber;
+            
             Salary = 90000;
-            Paid = false;
             Specialty = specialty;
         }
 
@@ -22,5 +20,7 @@ namespace MasteryProject
         {
 
         }
+
+        
     }
 }

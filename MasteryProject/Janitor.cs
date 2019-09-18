@@ -8,13 +8,12 @@ namespace MasteryProject
     {
         public bool IsSweeping { get; set; }
 
-        public Janitor(string name, int employeeNumber, bool isSweeping)
+        public Janitor(string name, string employeeNumber, bool isSweeping) : base(name, employeeNumber)
         {
-            Name = name;
-            EmployeeNumber = employeeNumber;
+            
             Salary = 40000;
-            Paid = false;
             IsSweeping = false;
         }
+        
     }
 }
