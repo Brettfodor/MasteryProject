@@ -18,20 +18,14 @@ namespace MasteryProject
         {
             
             patient.HealthLevel += 10;
-            Console.WriteLine($"Doctor {Name} assisted the patient. The patient's health level is now {patient.HealthLevel}");
-            Console.WriteLine("Press 'Enter' to continue");
-            Console.ReadLine();
-            Console.Clear();
+            
 
         }
         public override void CheckPatientBloodLevel(Patient patient)
         {
             
             patient.BloodLevel -= 5;
-            Console.WriteLine($" A doctor drew blood and the patient's blood level is now {patient.BloodLevel}");
-            Console.WriteLine("Press 'Enter' to continue");
-            Console.ReadLine();
-            Console.Clear();
+            
         }
 
         public override void CheckInfo()

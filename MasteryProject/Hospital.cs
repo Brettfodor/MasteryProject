@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MasteryProject
 {
-    class Hospital
+    public class Hospital
     { 
         public List<Employee> employeesInHospital = new List<Employee>()
         {

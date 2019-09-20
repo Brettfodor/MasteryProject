@@ -46,7 +46,10 @@ namespace MasteryProject
                         if (userChoice == 1)
                         {
                             Doctor.CheckPatientBloodLevel(patient);
-                            
+                            Console.WriteLine($" A doctor drew blood and the patient's blood level is now {patient.BloodLevel}");
+                            Console.WriteLine("Press 'Enter' to continue");
+                            Console.ReadLine();
+                            Console.Clear();
 
 
                         }
@@ -54,16 +57,27 @@ namespace MasteryProject
                         {
 
                             Nurse.CheckPatientBloodLevel(patient);
-                            
+                            Console.WriteLine($"A nurse drew blood, and The patient's blood level is now {patient.BloodLevel}");
+                            Console.WriteLine("Press 'Enter' to continue");
+                            Console.ReadLine();
+                            Console.Clear();
 
                         }
                         else if (userChoice == 3)
                         {
                             Doctor.CareForPatient(patient);
+                            Console.WriteLine($"A doctor assisted the patient. The patient's health level is now {patient.HealthLevel}");
+                            Console.WriteLine("Press 'Enter' to continue");
+                            Console.ReadLine();
+                            Console.Clear();
                         }
                         else if (userChoice == 4)
                         {
                             Nurse.CareForPatient(patient);
+                            Console.WriteLine($"A nurse assisted the patient, and the patient's health level is now {patient.HealthLevel}");
+                            Console.WriteLine("Press 'Enter' to continue");
+                            Console.ReadLine();
+                            Console.Clear();
                         }
                         
 
