@@ -8,14 +8,14 @@ namespace MasteryProject
     { 
         public List<Employee> employeesInHospital = new List<Employee>()
         {
-            new Doctor("don", "0002", "Podiatrist" ), new Nurse("Kathy", "0003", 1), new Receptionist("Yolanda", "0004", false), new Janitor("Dingus", "0005", false)
+            new Doctor("Don", "0002", "Podiatrist" ), new Nurse("Kathy", "0003", 1), new Receptionist("Yolanda", "0004", false), new Janitor("Dingus", "0005", false)
         };
         
 
         public void EmployeeCreation()
         {
             Console.Clear();
-            // Get pet type from user
+            // Get employee type from user
             Console.WriteLine("What type of Employee are you looking for? (type 'd' doctor, 'n' for nurse, 'r' for receptionist, or 'j' for Janitor)");
             string type = Console.ReadLine();
             //Get name from user
@@ -24,7 +24,7 @@ namespace MasteryProject
             string name = Console.ReadLine();
 
             Console.Clear();
-            // Get species from user
+            // Get emp ID from user
 
             Console.WriteLine("What is the Employee's Employee Identification Number?");
 
@@ -76,13 +76,36 @@ namespace MasteryProject
 
         public void AllCheckInfo()
         {
-
-            foreach (Employee employee in employeesInHospital) employee.CheckInfo();
-
+            int i = 1;
+            foreach (Employee employee in employeesInHospital)
+            {
+                
+                Console.WriteLine($"{i}. {employee.Name} {employee.EmployeeNumber} {employee.Salary}");
+                i++;
+            }
             Console.WriteLine("Press 'Enter' to continue");
             Console.ReadLine();
             Console.Clear();
 
+        }
+
+        public Employee SelectEmployee(Hospital hospital)
+        {
+            int i = 1;
+
+            Console.WriteLine("Please choose the number of the employee you'd like to interact with");
+            foreach (Employee hospitalEmployee in employeesInHospital)
+
+            {
+                Console.WriteLine($"{i}. {hospitalEmployee.Name}");
+                i++;
+            }
+
+            Employee employee = employeesInHospital[Convert.ToInt32(Console.ReadLine()) - 1];
+            employeesInHospital.Add(employee);
+            return employee;
+
+            
         }
     }
 }

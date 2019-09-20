@@ -26,5 +26,16 @@ namespace MasteryProject
                 Console.WriteLine($"Employee {EmployeeNumber}, {Name} is on the phone");
             }
         }
+        public override void PaySalary()
+        {
+            if (!Paid)
+            {
+                Console.WriteLine($"You Have Paid {Name} {Salary}.");
+                Paid = true;
+            }
+            else
+            { Console.WriteLine($"{Name} has already been paid."); }
+        }
+
     }
 }

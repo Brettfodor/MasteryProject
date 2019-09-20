@@ -19,15 +19,14 @@ namespace MasteryProject
 
 
         }
-        public void PaySalary()
+        public Employee()
         {
-            if (!Paid)
-            {
-                Console.WriteLine($"You Have Paid {Name} {Salary}.");
-                Paid = true;
-            }
-            else
-            { Console.WriteLine($"{Name} has already been paid."); }
+
+        }
+
+         public virtual void PaySalary()
+        {
+            
         }
         public virtual void CheckInfo()
         {
