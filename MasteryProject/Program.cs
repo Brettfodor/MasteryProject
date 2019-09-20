@@ -5,60 +5,75 @@ namespace MasteryProject
     class Program
     {
         static void Main(string[] args)
-        {   Employee employee = new Employee();
+        {   Employee employee = new Employee("Don", "0005");
             Doctor Doctor = new Doctor("Don", "0001", "Gastroenterology");
             Nurse Nurse = new Nurse("Kathy", "0002", 1);
             Receptionist Receptionist = new Receptionist("Yolanda", "0003", false);
             Janitor Janitor = new Janitor("Dingus", "0004", false);
             Hospital hospital = new Hospital();
+            Patient patient = new Patient();
+           
             bool usingApp = true;
             while (usingApp)
             {
+                employee = new Employee();
                 Console.WriteLine("Hello!  What would you like to do?");
                 Console.WriteLine("Type '1' to print out a list of employees");
                 Console.WriteLine("Type '2' to pay all employees");
-                Console.WriteLine("Type '3' to choose an employee and have them perform a task");
+                Console.WriteLine("Type '3' to have a Doctor or Nurse draw blood or care for a patient");
                 string userInput = Console.ReadLine();
                 switch (userInput)
                 {
                     case "1":
-                
                     hospital.AllCheckInfo();
                         break;
 
 
                     case "2":
-                
-
-                    foreach (Employee hospitalEmployee in hospital.employeesInHospital)
-                    {
-                        employee.PaySalary();
-                        //Doctor.PaySalary();
-                        //Nurse.PaySalary();
-                        //Janitor.PaySalary();
-                        //Receptionist.PaySalary();
-
-                    }
-                    Console.Clear();
-                    Console.WriteLine("All Employees have been paid");
-                    Console.WriteLine("Press 'Enter' to continue");
-                    Console.ReadLine();
-                    Console.Clear();
+                        hospital.AllPaySalary();
                         break;
 
 
                     case "3":
-                
+                        Console.Clear();
+                        Console.WriteLine("Type '1' to assign a Doctor to draw blood from a patient");
+                        Console.WriteLine("Type '2' to assign a Nurse to draw blood from a patient");
+                        Console.WriteLine("type '3' to assign a Doctor to care for a patient");
+                        Console.WriteLine("Type '4' to assign a Nurse to care for a patient");
 
-                    hospital.SelectEmployee(hospital);
-                    Console.WriteLine($"What would you like to do with {employee.Name}?");
+                        int userChoice =Convert.ToInt32(Console.ReadLine());
+                        
+                        if (userChoice == 1)
+                        {
+                            Doctor.CheckPatientBloodLevel(patient);
+                            
+
+
+                        }
+                        else if (userChoice == 2)
+                        {
+
+                            Nurse.CheckPatientBloodLevel(patient);
+                            
+
+                        }
+                        else if (userChoice == 3)
+                        {
+                            Doctor.CareForPatient(patient);
+                        }
+                        else if (userChoice == 4)
+                        {
+                            Nurse.CareForPatient(patient);
+                        }
+                        
+
 
                         break;
                 
 
                 }
 
-
+                Console.Clear();
             }
 
 

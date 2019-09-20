@@ -16,10 +16,10 @@ namespace MasteryProject
         {
             Console.Clear();
             // Get employee type from user
-            Console.WriteLine("What type of Employee are you looking for? (type 'd' doctor, 'n' for nurse, 'r' for receptionist, or 'j' for Janitor)");
+            Console.WriteLine("What type of Employee? (type 'd' doctor, 'n' for nurse, 'r' for receptionist, or 'j' for Janitor)");
             string type = Console.ReadLine();
             //Get name from user
-            Console.WriteLine("What is the name of the Employee you are looking for?");
+            Console.WriteLine("What is the name of the Employee?");
 
             string name = Console.ReadLine();
 
@@ -40,6 +40,9 @@ namespace MasteryProject
                 string specialty = Console.ReadLine();
                 newEmployee = new Doctor(name, employeeNumber, specialty);
                 employeesInHospital.Add(newEmployee);
+                Console.WriteLine("Press 'Enter' to continue");
+                Console.ReadLine();
+                Console.Clear();
             }
             else if (type == "n")
             {
@@ -47,6 +50,9 @@ namespace MasteryProject
                 int numberOfPatients = Convert.ToInt32(Console.ReadLine());
                 newEmployee = new Nurse(name, employeeNumber, numberOfPatients);
                 employeesInHospital.Add(newEmployee);
+                Console.WriteLine("Press 'Enter' to continue");
+                Console.ReadLine();
+                Console.Clear();
             }
             else if (type == "r")
             {
@@ -54,6 +60,9 @@ namespace MasteryProject
                 bool onThePhone = false;
                 newEmployee = new Receptionist(name, employeeNumber, onThePhone);
                 employeesInHospital.Add(newEmployee);
+                Console.WriteLine("Press 'Enter' to continue");
+                Console.ReadLine();
+                Console.Clear();
             }
             else if (type == "j")
             {
@@ -61,6 +70,9 @@ namespace MasteryProject
                 bool isSweeping = false;
                 newEmployee = new Janitor(name, employeeNumber, isSweeping);
                 employeesInHospital.Add(newEmployee);
+                Console.WriteLine("Press 'Enter' to continue");
+                Console.ReadLine();
+                Console.Clear();
             }
 
 
@@ -79,8 +91,10 @@ namespace MasteryProject
             int i = 1;
             foreach (Employee employee in employeesInHospital)
             {
+
+                Console.Write($"{i}."); 
                 
-                Console.WriteLine($"{i}. {employee.Name} {employee.EmployeeNumber} {employee.Salary}");
+                employee.CheckInfo();
                 i++;
             }
             Console.WriteLine("Press 'Enter' to continue");
@@ -89,7 +103,8 @@ namespace MasteryProject
 
         }
 
-        public Employee SelectEmployee(Hospital hospital)
+
+        public Employee SelectEmployee()
         {
             int i = 1;
 
@@ -100,12 +115,32 @@ namespace MasteryProject
                 Console.WriteLine($"{i}. {hospitalEmployee.Name}");
                 i++;
             }
+            int input  =Convert.ToInt32(Console.ReadLine()) - 1;
+            Employee employee = employeesInHospital[input];
 
-            Employee employee = employeesInHospital[Convert.ToInt32(Console.ReadLine()) - 1];
-            employeesInHospital.Add(employee);
+
+            
+
             return employee;
 
             
         }
+        public void AllPaySalary()
+        {
+            int i = 1;
+            foreach (Employee employee in employeesInHospital)
+            {
+
+                Console.Write($"{i}.");
+
+                employee.PaySalary();
+                i++;
+            }
+            Console.WriteLine("Press 'Enter' to continue");
+            Console.ReadLine();
+            Console.Clear();
+
+        }
+
     }
 }

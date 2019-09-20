@@ -15,21 +15,32 @@ namespace MasteryProject
             NumberofPatients = numberOfPatients;
         }
 
-        public void CareForPatient()
+        public override void CareForPatient(Patient patient)
         {
-            Patient patient = new Patient();
+            
             patient.HealthLevel += 5;
+            Console.WriteLine($"Nurse {Name} assisted the patient, and the patient's health level is now {patient.HealthLevel}");
+            Console.WriteLine("Press 'Enter' to continue");
+            Console.ReadLine();
+            Console.Clear();
+
         }
 
-        public void CheckPatientBloodLevel()
+        public override void CheckPatientBloodLevel(Patient patient)
         {
-            Patient patient = new Patient();
-            patient.HealthLevel += 5;
+            
+            patient.BloodLevel -= 10;
+            Console.WriteLine($"Nurse {Name} drew blood, and The patient's blood level is now {patient.BloodLevel}");
+            Console.WriteLine("Press 'Enter' to continue");
+            Console.ReadLine();
+            Console.Clear();
         }
 
         public override void CheckInfo()
         {
-            Console.WriteLine($"Employee {EmployeeNumber} {Name} has {NumberofPatients} patients");
+            Console.WriteLine($" Employee Name: {Name} Employee ID: {EmployeeNumber} Employee Salary: {Salary} Number of Patients: {NumberofPatients}");
+
+
         }
 
         public override void PaySalary()
@@ -38,9 +49,12 @@ namespace MasteryProject
             {
                 Console.WriteLine($"You Have Paid {Name} {Salary}.");
                 Paid = true;
+                
             }
             else
-            { Console.WriteLine($"{Name} has already been paid."); }
+            { Console.WriteLine($"{Name} has already been paid.");
+                
+            }
         }
 
 

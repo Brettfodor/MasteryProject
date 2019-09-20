@@ -21,20 +21,42 @@ namespace MasteryProject
         }
         public Employee()
         {
-
         }
+        //public Employee()
+        //{
 
-         public virtual void PaySalary()
+        //}
+
+        public virtual void PaySalary()
         {
-            
+            if (!Paid)
+            {
+                Console.WriteLine($"You Have Paid {Name}  {Salary}.");
+                Paid = true;
+                
+            }
+            else
+            {
+                Console.WriteLine($"{Name} has already been paid.");
+               
+            }
         }
         public virtual void CheckInfo()
         {
             
         }
-        
+        public virtual void CareForPatient(Patient patient)
+        {
+            
 
-    
-        
+        }
+        public virtual void CheckPatientBloodLevel(Patient patient)
+        {
+            
+        }
+
+
+
+
     }
 }

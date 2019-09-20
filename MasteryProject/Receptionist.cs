@@ -19,12 +19,13 @@ namespace MasteryProject
         {
             if (OnPhone == true)
             {
-                Console.WriteLine($"Employee {EmployeeNumber}, {Name} is not on the phone");
+                Console.WriteLine($" Employee Name: {Name} Employee ID: {EmployeeNumber} Employee Salary: {Salary} Employee Status: On Phone");
             }
             else
             {
-                Console.WriteLine($"Employee {EmployeeNumber}, {Name} is on the phone");
+                Console.WriteLine($" Employee Name: {Name} Employee ID: {EmployeeNumber} Employee Salary: {Salary} Employee Status: Not On Phone");
             }
+            
         }
         public override void PaySalary()
         {

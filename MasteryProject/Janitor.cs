@@ -19,11 +19,11 @@ namespace MasteryProject
         {
             if (IsSweeping == true)
             {
-                Console.WriteLine($"Employee {EmployeeNumber}, {Name} is not sweeping");
+                Console.WriteLine($" Employee Name: {Name} Employee ID: {EmployeeNumber} Employee Salary: {Salary} Employee Status: Sweeping");
             }
             else
             {
-                Console.WriteLine($"Employee {EmployeeNumber}, {Name} is sweeping");
+                Console.WriteLine($" Employee Name: {Name} Employee ID: {EmployeeNumber} Employee Salary: {Salary} Employee Status: not Sweeping");
             }
         }
         public override void PaySalary()
@@ -32,9 +32,12 @@ namespace MasteryProject
             {
                 Console.WriteLine($"You Have Paid {Name} {Salary}.");
                 Paid = true;
+                
             }
             else
-            { Console.WriteLine($"{Name} has already been paid."); }
+            { Console.WriteLine($"{Name} has already been paid.");
+                
+            }
         }
 
 
