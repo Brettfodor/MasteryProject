@@ -21,6 +21,7 @@ namespace MasteryProject
                 Console.WriteLine("Type '1' to print out a list of employees");
                 Console.WriteLine("Type '2' to pay all employees");
                 Console.WriteLine("Type '3' to have a Doctor or Nurse draw blood or care for a patient");
+                Console.WriteLine("Type '4' to create a new employee profile");
                 string userInput = Console.ReadLine();
                 switch (userInput)
                 {
@@ -79,9 +80,10 @@ namespace MasteryProject
                             Console.ReadLine();
                             Console.Clear();
                         }
-                        
+                        break;
 
-
+                    case "4":
+                        hospital.EmployeeCreation();
                         break;
                 
 
